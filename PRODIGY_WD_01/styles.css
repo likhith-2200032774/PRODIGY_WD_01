@@ -1,0 +1,251 @@
+/* General styling for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Styling for the header */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #1b1f24;
+    color: #f4f4f9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #61dafb;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Navbar styling */
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #393e46; /* Updated navbar color */
+    color: white;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0; /* Increased padding for better height */
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    margin: 0 25px; /* Increased spacing between navbar items */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px; /* Adjusted padding for better size */
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    background-color: #00adb5; /* Updated hover color */
+    color: #393e46; /* Updated text color on hover */
+}
+
+#navbar.scrolled {
+    background-color: #1b1f24;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content styling */
+main {
+    padding-top: 100px; /* Space for fixed header */
+    padding: 20px;
+    background-color: #f4f4f9; /* Updated background color */
+}
+
+/* Section styling */
+section {
+    padding: 50px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Updated font color */
+}
+
+/* Specific section background colors */
+#home {
+    background-color: #ccbaba; /* Updated background color */
+}
+
+#creator {
+    background-color: #f8c291; /* Updated background color */
+}
+
+#movies {
+    background-color: #82ccdd; /* Updated background color */
+}
+
+#characters {
+    background-color: #b8e994; /* Updated background color */
+}
+
+#contact {
+    background-color: #00adb5; /* Updated background color */
+}
+
+/* Character grid styling */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.character-card {
+    background-color: #282c34;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.character-card h3 {
+    margin-top: 15px;
+    color: #61dafb;
+}
+
+.character-card p {
+    margin-top: 10px;
+    color: #b0bec5;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #282c34;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-card .movie-info {
+    padding: 20px;
+}
+
+.movie-card h3 {
+    margin: 10px 0;
+    color: #61dafb;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #1b1f24;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #21a1f1;
+}
+
+footer {
+    background-color: #1b1f24;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #navbar ul li {
+        margin: 0 10px;
+    }
+
+    #navbar ul li a {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
